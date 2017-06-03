@@ -8,16 +8,36 @@
 from __future__ import print_function
 
 
+class List:
+    def __init__(self):
+        self.head = Node(None, None)
+        self.tail = Node(None, self.head)
+        self.head.neighbor = self.tail
+        
+        
+    def append(self, val):  
+        # `left_neighbor` has `val` None at `head`
+        if self.tail.left_neighbor.val == None:   
+            node = Node(val, self.head)
+            self.head.neighbor = node
+            self.tail.left_neighbor = node
+        else:
+            node_left_neighbor = self.tail.left_neighbor
+            node = Node(val, node_left_neighbor)
+            node.add_neighbor(None)                      # this is `tail` now
+            self.tail = node.neighbor
+
+        
 
 class Node:
-
-    def __init__(self, val):
+    def __init__(self, val, left_neighbor):
         self.val = val
+        self.left_neighbor = left_neighbor
         self.neighbor = None
 
     def add_neighbor(self, neighbor_val):
-        self.neighbor = Node(neighbor_val)
-
+        self.neighbor = Node(neighbor_val, self)
+        
     def has_neighbor(self):
         res = self.neighbor != None
         return res
