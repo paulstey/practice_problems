@@ -1,6 +1,8 @@
 // Simple Palindrom-Checking Algorithm
 // Author: Paul Stey
 // Date: 2017-06-17
+// CXXFLAGS: -Wall
+
 
 #include <iostream>
 #include <string>
