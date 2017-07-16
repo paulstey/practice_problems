@@ -1,3 +1,13 @@
+// Compute Integer Square Root
+// Author: Paul Stey
+// Date: 2017-07-16
+// CXXFLAGS: -Wall
+// Description: Given a single number, this
+//   program computes the integer square root.
+//   So only exact solutions are returned for
+//   non-perfect square numbers. In other cases,
+//   the floor of the square root is returned.
+
 #include <iostream>
 
 int square_root(int n) {
