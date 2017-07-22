@@ -1,7 +1,7 @@
 // Fibonacci numbers using malloc() for dynamic allocation
 // Author: Paul Stey
 // Date: 2017-06-16
-// GCCFLAGS: -Wall
+// CFLAGS: -Wall
 
 #include <stdio.h>
 #include <stdlib.h>
