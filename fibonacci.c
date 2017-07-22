@@ -8,7 +8,7 @@
 
 
 int fib(int n) {
-    uint64_t *arr = (uint64_t *) malloc(n);
+    uint64_t* arr = (uint64_t*) malloc(n);
     arr[0] = 0;
     arr[1] = 1;
 
@@ -21,7 +21,7 @@ int fib(int n) {
     return arr[n];
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
     
     int n = atoi(argv[1]);
     uint64_t res;
